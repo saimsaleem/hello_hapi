@@ -11,12 +11,9 @@ pipeline {
             }
         }
         stage('Test') {
-            environment {
-                NODE_ENV = 'test' // Set NODE_ENV to 'test'
-            }
             steps {
                 echo 'Testing...'
-                bat 'npm test'
+                bat 'set NODE_ENV=test && npm test' // Set NODE_ENV and run npm test
             }
         }
     }
