@@ -7,13 +7,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'npm install'
+                bat 'npm install' // Replaced sh with bat
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'npm test'
+                bat 'npm test' // Replaced sh with bat
             }
         }
     }
