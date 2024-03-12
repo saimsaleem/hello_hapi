@@ -13,7 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                bat 'set NODE_ENV=test && npm test' // Set NODE_ENV and run npm test
+                bat 'npm test'
             }
         }
     }
